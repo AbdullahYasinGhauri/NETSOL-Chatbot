@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSOL Chatbot Using RAG & SQLite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--
+<body>
+
+<div class="header">
+    <h2>NETSOL AI Assistant</h2>
+    <button onclick="newChat()">New Chat</button>
+</div>
+
+<div class="container">
+
+    <div class="header">
+        <h2>NETSOL AI Assistant</h2>
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="input-area">
+        <input
+            type="text"
+            id="question"
+            placeholder="Ask something..."
+            autocomplete="off"
+        >
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body> -->
+<body>
+
+<div class="app">
+
+    <div class="sidebar">
+
+        <button class="new-chat" onclick="newChat()">
+            + New Chat
+        </button>
+
+        <div id="sessions"></div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="header">
+            <h2>NETSOL AI Assistant</h2>
+        </div>
+
+        <div id="chat-box" class="chat-box"></div>
+
+        <div class="input-area">
+
+            <input
+                id="question"
+                type="text"
+                placeholder="Ask something..."
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
