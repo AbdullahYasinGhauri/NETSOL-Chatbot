@@ -8,7 +8,7 @@ load_dotenv()
 api_key = os.getenv("api_key")
 client = genai.Client(api_key=api_key)
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-2.5-flash-lite"
 
 
 def router_node(state: AgentState):
@@ -39,7 +39,7 @@ Return ONLY one word.
         model=MODEL,
         contents=prompt
     )
-
+    
     state["route"] = response.text.strip().lower()
-
+    print(f"Route: {state['route']}")
     return state
