@@ -1,11 +1,9 @@
 from langgraph.graph import StateGraph, END
-
 from state import AgentState
 from router_node import router_node
 from rag_node import rag_node
 from sql_node import sql_node
 from answer_node import answer_node
-
 
 # --------------------------
 # Routing Function
@@ -13,7 +11,6 @@ from answer_node import answer_node
 def route_question(state: AgentState):
 
     return state["route"]
-
 
 # --------------------------
 # Build Graph
@@ -46,9 +43,8 @@ builder.add_edge("rag", "sql")
 builder.add_edge("sql", "answer")
 builder.add_edge("answer", END)
 
-# Compile
+# compiles
 graph = builder.compile()
-
 
 # --------------------------
 # Test

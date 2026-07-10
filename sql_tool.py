@@ -8,7 +8,7 @@ load_dotenv()
 api_key=os.getenv("api_key")
 client=genai.Client(api_key=api_key)
 
-model = ("gemini-2.5-flash")
+model = ("gemini-2.5-flash-lite")
 
 def get_schema():
 
